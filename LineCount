@@ -1,0 +1,17 @@
+val file = sc.textFile("hdfs://10.157.114.222:9000/word.txt")
+
+file.persist(org.apache.spark.storage.StorageLevel.MEMORY_2)
+
+file.count()
+
+file.checkpoint()
+sc.setCheckpointDir("hdfs://10.157.114.222:9000/")
+val errors = file.filter(line => line.contains("testa"))
+errors.persist()
+errors.checkpoint()
+errors.count()
+errors.count()
+
+val counts = errors.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
+sc.setCheckpointDir("hdfs://10.157.114.222:9000/")
+errors.saveAsObjectFile("hdfs://10.157.114.222:9000/cache")

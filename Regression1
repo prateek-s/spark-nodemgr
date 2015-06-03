@@ -1,0 +1,24 @@
+Normal:505s
+Stop at the same time 200s: 784s
+Stop one by one 200s: 1097s
+Stop one at 111s: 10126s 89/154
+Stop one at 222s: 2692s 99/154
+Stop one at 333s: 3987s  94/154
+Stop one at 125s and restart and stop one at 400s and restart: 574s
+Stop two at the same time at 250s and restart: 581s
+Stop two at the same time at 400s and restart: 597s
+12 executors: 199 99
+8 executors: 217 117
+6 executors: 225 125
+4 executors: 265 165
+2 executors: 405 305
+12 executors break: 304 204
+
+320 311
+157
+
+1 fs 2 task: 227
+1 fs 3 task: 305
+2 fs 3 task: 207
+2 fs 2 task: 259
+2 fs 1 task: 1611   173/178

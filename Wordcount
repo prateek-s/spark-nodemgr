@@ -1,0 +1,6 @@
+1 fs 1 task(local):114
+1 fs 2 task(1 local, 1 non): 106
+1 fs 2 task(2 non): 87
+1 fs 1 task(non): 125
+
+terminate all in the middle and restart: 167

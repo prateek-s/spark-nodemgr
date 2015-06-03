@@ -1,0 +1,3 @@
+val file = sc.textFile("hdfs://10.157.114.222:9000/word.txt")
+val counts = file.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
+counts.collect()

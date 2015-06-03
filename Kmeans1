@@ -1,0 +1,9 @@
+Normal 576s
+Stop at the same time 200s: 809s
+Stop one by one 200s: 822s
+Stop one at 125s: 1178s
+Stop one at 250s: 907s
+Stop one at 400s: 747s
+Stop one at 125s and restart and stop one at 400s and restart: 624s
+Stop two at the same time at 250s and restart: 636s
+
