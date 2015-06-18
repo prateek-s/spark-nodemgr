@@ -663,6 +663,8 @@ def main():
     for inst in task_slave_nodes:
       if inst.state not in ["shutting-down", "terminated"]:
         inst.start()
+
+        
 if __name__ == "__main__":
   logging.basicConfig()
   main()
